@@ -16,6 +16,11 @@ Each project is window-based and focuses on understanding essential GUI programm
    - Focuses on layout and event response without authentication logic.
    ![Login GUI Screenshot](assets/login_gui.png)
 
+3. **ToDo List GUI (Ongoing)**  
+   - A simple task manager GUI for adding, editing, and deleting tasks.  
+   - Helps practice list management, buttons, and event handling in Tkinter.  
+   ![ToDo GUI Screenshot](assets/todo_gui.png)
+
 ---
 
 ## Notes
