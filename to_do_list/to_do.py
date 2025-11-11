@@ -26,7 +26,6 @@ def add():
     else:
         messagebox.showwarning("Warning", "Please enter a task.")
 
-
 # one line text box
 entry = tk.Entry(root, font=("Arial", 20))
 entry.pack(pady=20)

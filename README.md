@@ -14,6 +14,7 @@ Each project is window-based and focuses on understanding essential GUI programm
 2. **Login GUI (Happy Path Only)**  
    - Simple login interface demonstrating input handling and button events.  
    - Focuses on layout and event response without authentication logic.
+   ![Login GUI Screenshot](assets/login_gui.png)
 
 ---
 
