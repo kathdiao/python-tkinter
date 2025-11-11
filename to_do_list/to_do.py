@@ -1,4 +1,3 @@
-#To Do List GUI
 import tkinter as tk
 from tkinter import messagebox
 
@@ -9,11 +8,23 @@ root.geometry("1000x700")
 tk.Label(root, text="TO DO List", font=("Arial", 20, "bold")).pack(pady=20)
 
 def end():
-    messagebox.showwarning("Warning", "Are you sure you want to exit?")
+    messagebox.askyesno("Exit Confirmation", "Are you sure you want to exit?")
     root.destroy()
 
-button = tk.Button(root,  text="x", command=end, font=("Arial", 10), bg="red", fg="white")
-button.pack(ipady=10)
+exit_btn = tk.Button(root,  text="x", command=end, font=("Arial", 10), bg="red", fg="white")
+exit_btn.place(x=950, y=10)
+
+task_count = 0
+
+def add():
+    global task_count
+    task = entry.get()
+    if task != "":
+        task_count += 1
+        textbox.insert(tk.END, f"{task_count}. {task}\n")
+        entry.delete(0, tk.END)
+    else:
+        messagebox.showwarning("Warning", "Please enter a task.")
 
 
 # one line text box
@@ -23,7 +34,7 @@ entry.pack(pady=20)
 button_frame = tk.Frame(root)
 button_frame.columnconfigure(0, weight=1)
 
-btn1 = tk.Button(button_frame, text="Add",font=("Arial", 15), command="add")
+btn1 = tk.Button(button_frame, text="Add",font=("Arial", 15), command=add)
 btn1.grid(row=1, column=0, sticky=tk.W+tk.E)
 
 btn2 = tk.Button(button_frame, text="View", font=("Arial", 15))
